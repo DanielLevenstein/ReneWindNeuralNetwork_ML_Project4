@@ -1,3 +1,8 @@
+# Project Info
+- Class: Introduction to Neural Networks
+- Submission Date: 9/10/2025
+- Author: Daniel Levenstein
+
 ## Objective
 “ReneWind” is a company working on improving the machinery/processes involved in the production of wind energy using machine learning and has collected data of generator failure of wind turbines using sensors. They have shared a ciphered version of the data, as the data collected through sensors is confidential (the type of data collected varies with companies). Data has 40 predictors, 20000 observations in the training set and 5000 in the test set.
 
@@ -20,21 +25,26 @@ The data provided is a transformed version of the original data which was collec
 
 Both the datasets consist of 40 predictor variables and 1 target variable.
 
+## Methodology
+- In this project, I created multiple models to expect the part replacement schedule in a factory. 
+- One of the challenges of this project was which model came up on top changed based on which random sead was used for the project.
+
 ## Best Models
-|  | loss | precision | val_loss | val_precision | epoch | batch_size | model_name | num_layers |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 72 | 0.042012 | 0.979487 | 0.046343 | 0.995098 | 6 | 100 | model6: Adam Additional Epochs | 4 |
-| 3 | 0.041896 | 0.977186 | 0.04668 | 0.99005 | 6 | 100 | Model3: Adam 4 layers | 4 |
-| 11 | 0.050839 | 0.981432 | 0.052018 | 0.984456 | 29 | 100 | model5: SGD Additional Epochs | 4 |
-| 2 | 0.040496 | 0.981013 | 0.047554 | 0.980198 | 10 | 100 | Model2: Adam 3 layers | 3 |
-| 12 | 0.047231 | 0.981675 | 0.050612 | 0.979592 | 39 | 100 | model5: SGD Additional Epochs | 4 |
+|    | loss     | precision | val_loss | val_precision | epoch | batch_size | model_name                     | num_layers |
+|----|----------|-----------|----------|---------------|-------|------------|--------------------------------|------------|
+| 14 | 0.042012 | 0.979487  | 0.046343 | 0.995098      | 6     | 100        | Model6: Adam Additional Epochs | 4          |
+| 3  | 0.041896 | 0.977186  | 0.04668  | 0.99005       | 6     | 100        | Model3: Adam 4 layers          | 4          |
+| 7  | 0.050839 | 0.981432  | 0.052018 | 0.984456      | 29    | 100        | Model5: SGD Additional Epochs  | 4          |
+| 2  | 0.040496 | 0.981013  | 0.047554 | 0.980198      | 10    | 100        | Model2: Adam 3 layers          | 3          |
+| 8  | 0.047231 | 0.981675  | 0.050612 | 0.979592      | 39    | 100        | Model5: SGD Additional Epochs  | 4          |
 
 ### Conclusion
-- Adam preformed better than SDG when fewer epochs were allowed, but when more training was done SDG came out ahead.
+- Adam preformed better than SDG when fewer epochs were allowed, but when more training was done, SDG came out ahead.
 - Adding more layers increases model performance.
 - Attempting to manually tune the model learning rate made the performance worse.
 - The performance of these two models was similar, but the SDG model looks more stable based on the graph. 
-- The final model has a MSE of about 1%
+- The final model has an MSE of about 1%
+- When model was already performing well, additional training did not improve outcomes. 
 
 # **Actionable Insights and Recommendations**
 
